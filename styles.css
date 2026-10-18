@@ -218,3 +218,27 @@ p { margin: 0; }
   html { scroll-behavior: auto; }
   * { transition: none !important; }
 }
+
+/* Lista de precios por caja / unidad */
+.box-prices { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 6px; }
+.box-prices li {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  padding: 8px 0; border-top: 1px dashed var(--line);
+}
+.box-prices span { color: var(--text-2); font-size: .92rem; }
+.box-prices strong { font: 700 1.5rem/1 var(--head); color: var(--green); letter-spacing: .01em; }
+
+/* Usadas semi nuevas */
+.used {
+  margin-top: 28px; padding: 26px 28px; border-radius: var(--radius);
+  background: var(--green-soft); border: 1px solid rgba(138, 181, 58, .45);
+  display: grid; grid-template-columns: 1.4fr 1fr; gap: 28px; align-items: center;
+}
+.used .eyebrow { margin-bottom: 8px; }
+.used h3 { font-size: 1.8rem; text-transform: uppercase; margin-bottom: 8px; }
+.used p:not(.eyebrow) { color: var(--text-2); }
+.used .box-prices { margin: 0; }
+.used .box-prices strong { font-size: 2rem; }
+@media (max-width: 700px) {
+  .used { grid-template-columns: 1fr; gap: 16px; padding: 22px 20px; }
+}
