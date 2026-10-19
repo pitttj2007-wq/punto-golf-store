@@ -18,3 +18,15 @@ if (shareBtn) {
     } catch (e) { /* el usuario canceló */ }
   });
 }
+
+// GA4: cuenta cada clic a WhatsApp (marcarlo como evento clave en GA4).
+document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
+  link.addEventListener('click', () => {
+    if (typeof gtag === 'function') {
+      gtag('event', 'whatsapp_click', {
+        whatsapp_number: (link.href.match(/wa\.me\/(\d+)/) || [])[1],
+        link_location: link.closest('section, header, footer, .sticky-cta')?.id || link.closest('header, footer, .sticky-cta')?.className || 'otro'
+      });
+    }
+  });
+});
