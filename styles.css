@@ -242,3 +242,59 @@ p { margin: 0; }
 @media (max-width: 700px) {
   .used { grid-template-columns: 1fr; gap: 16px; padding: 22px 20px; }
 }
+
+/* Menú mobile (tres rayitas) */
+.burger {
+  display: none; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line);
+  border-radius: 12px; background: var(--surface); cursor: pointer;
+  flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+}
+.burger span { display: block; width: 20px; height: 2px; border-radius: 2px; background: var(--text); }
+.burger:hover span { background: var(--green-hi); }
+
+.menu { position: fixed; inset: 0; z-index: 50; }
+.menu[hidden] { display: none; }
+.menu__backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, .6); }
+.menu__panel {
+  position: absolute; top: 0; right: 0; bottom: 0; width: min(300px, 82vw);
+  background: var(--surface); border-left: 1px solid var(--line);
+  padding: 72px 22px 24px; display: flex; flex-direction: column; gap: 4px;
+  overflow-y: auto; animation: menu-in .22s ease-out;
+}
+.menu__panel > a {
+  color: var(--text); text-decoration: none; padding: 14px 4px;
+  font: 700 1.5rem/1 var(--head); text-transform: uppercase; letter-spacing: .04em;
+  border-bottom: 1px solid var(--line);
+}
+.menu__panel > a:hover, .menu__panel > a:focus-visible { color: var(--green-hi); }
+.menu__close {
+  position: absolute; top: 14px; right: 14px; width: 44px; height: 44px;
+  border: 1px solid var(--line); border-radius: 12px; background: transparent;
+  color: var(--text); font-size: 1.8rem; line-height: 1; cursor: pointer;
+}
+.menu__wa { display: grid; gap: 10px; margin-top: 22px; }
+.menu__wa .btn { width: 100%; font-size: .95rem; }
+@keyframes menu-in { from { transform: translateX(100%); } to { transform: none; } }
+body.menu-open { overflow: hidden; }
+
+@media (max-width: 900px) {
+  .burger { display: flex; }
+  .nav__inner > .btn--sm { margin-left: auto; }
+}
+
+/* Bolsa usada (sin foto todavía) */
+.acc--wide { grid-column: 1 / -1; }
+.acc__ph {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  min-height: 200px; background: var(--surface-2); color: var(--green); text-align: center;
+  font: 600 .85rem/1.3 var(--body); padding: 16px;
+}
+.acc__ph svg { width: 56px; height: 56px; }
+.acc__ph span { color: var(--text-2); }
+.acc--wide .acc__body .eyebrow { margin-bottom: 0; }
+
+@media (max-width: 360px) {
+  .brand { gap: 8px; }
+  .brand img { width: 38px; height: 38px; }
+  .brand span { font-size: 1.15rem; white-space: nowrap; }
+}

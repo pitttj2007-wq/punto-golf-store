@@ -55,6 +55,9 @@
     "makesOffer": [
       {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cepillo de golf absorbente"}, "price": "19990", "priceCurrency": "ARS"},
       {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Toalla de golf con clips"}, "price": "9990", "priceCurrency": "ARS"},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Guante de golf Wilson Feel Plus"}, "price": "19000", "priceCurrency": "ARS"},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Guante de golf FootJoy WeatherSof"}, "price": "19000", "priceCurrency": "ARS"},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Bolsa de golf TaylorMade Catalina 3.0 usada"}, "price": "95000", "priceCurrency": "ARS", "itemCondition": "https://schema.org/UsedCondition"},
       {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Pelotas Titleist Pro V1 x12"}, "price": "118000", "priceCurrency": "ARS"},
       {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Pelotas Callaway Supersoft x12"}, "price": "68000", "priceCurrency": "ARS"},
       {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Pelotas TaylorMade Distance+ x12"}, "price": "48000", "priceCurrency": "ARS"},
@@ -75,11 +78,31 @@
         <a href="#pelotas">Pelotas</a>
         <a href="#guantes">Guantes</a>
         <a href="#accesorios">Accesorios</a>
+        <a href="#videos">Videos</a>
         <a href="#como-comprar">Cómo comprar</a>
       </nav>
       <a class="btn btn--sm" href="https://wa.me/5491124754230?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Punto%20Golf%20Store%20y%20quer%C3%ADa%20consultar%20precio%20y%20stock." target="_blank" rel="noopener">WhatsApp</a>
+      <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
+
+  <div class="menu" id="menu" hidden>
+    <div class="menu__backdrop" data-close></div>
+    <nav class="menu__panel" aria-label="Menú">
+      <button class="menu__close" type="button" aria-label="Cerrar menú" data-close>&times;</button>
+      <a href="#pelotas">Pelotas</a>
+      <a href="#guantes">Guantes</a>
+      <a href="#accesorios">Accesorios</a>
+      <a href="#videos">Videos</a>
+      <a href="#como-comprar">Cómo comprar</a>
+      <div class="menu__wa">
+        <a class="btn" href="https://wa.me/5491124754230?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Punto%20Golf%20Store%20y%20quer%C3%ADa%20consultar%20precio%20y%20stock." target="_blank" rel="noopener">WhatsApp 11 2475-4230</a>
+        <a class="btn btn--ghost" href="https://wa.me/5491124820849?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Punto%20Golf%20Store%20y%20quer%C3%ADa%20consultar%20precio%20y%20stock." target="_blank" rel="noopener">WhatsApp 11 2482-0849</a>
+      </div>
+    </nav>
+  </div>
 
   <main>
     <!-- HERO -->
@@ -173,7 +196,7 @@
         <header class="section__head">
           <p class="eyebrow">02 · Guantes</p>
           <h2>Guantes Wilson y FootJoy</h2>
-          <p>Los dos modelos que tenemos publicados. Decinos tu talle y para qué mano, y te confirmamos si está.</p>
+          <p>Wilson o FootJoy, el que elijas sale $19.000. Decinos tu talle y para qué mano, y te confirmamos si está.</p>
           <a class="link" href="https://wa.me/5491124754230?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20Punto%20Golf%20Store%20y%20quer%C3%ADa%20consultar%20precio%20y%20stock." target="_blank" rel="noopener">Preguntar por talles →</a>
         </header>
         <div class="cards cards--2">
@@ -182,6 +205,7 @@
             <div class="card__body">
               <h3>Wilson Feel Plus</h3>
               <p>Cuero sintético, el clásico blanco con la W.</p>
+              <p class="price price--big">$19.000</p>
             </div>
           </article>
           <article class="card">
@@ -189,6 +213,7 @@
             <div class="card__body">
               <h3>FootJoy WeatherSof</h3>
               <p>El de empaque verde, cuero sintético blando.</p>
+              <p class="price price--big">$19.000</p>
             </div>
           </article>
         </div>
@@ -200,8 +225,8 @@
       <div class="wrap">
         <header class="section__head">
           <p class="eyebrow">03 · Accesorios</p>
-          <h2>Cepillos y toallas para la bolsa</h2>
-          <p>Lo que te salva cuando el palo sale con barro del rough.</p>
+          <h2>Cepillos, toallas y bolsa usada</h2>
+          <p>Lo que te salva cuando el palo sale con barro del rough, y una bolsa TaylorMade usada a mucho menos que una nueva.</p>
         </header>
         <div class="price-table">
           <article class="acc">
@@ -218,6 +243,19 @@
               <h3>Toalla con clips</h3>
               <p>Súper absorbente, en negro y gris. Se cuelga de la bolsa con el clip.</p>
               <p class="price price--big">$9.990</p>
+            </div>
+          </article>
+          <article class="acc acc--wide">
+            <!-- A CONFIRMAR: falta foto real de la bolsa TaylorMade Catalina 3.0 usada (estado, color). -->
+            <div class="acc__ph" role="img" aria-label="Foto pendiente de la bolsa TaylorMade Catalina 3.0">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M22 6h20v8H22zM20 14h24l-2 44H22z" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><path d="M26 6V2M32 6V1M38 6V3M24 26h16M24 34h16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+              <span>Pedinos fotos<br>por WhatsApp</span>
+            </div>
+            <div class="acc__body">
+              <p class="eyebrow">Usada</p>
+              <h3>Bolsa TaylorMade Catalina 3.0</h3>
+              <p>Bolsa de golf usada. Si te interesa, te mandamos fotos y te la mostramos sin compromiso.</p>
+              <p class="price price--big">$95.000</p>
             </div>
           </article>
         </div>

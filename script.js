@@ -30,3 +30,23 @@ document.querySelectorAll('a[href*="wa.me"]').forEach((link) => {
     }
   });
 });
+
+// Menú mobile: abre el panel lateral y lo cierra al elegir una sección.
+const burger = document.querySelector('.burger');
+const menu = document.getElementById('menu');
+if (burger && menu) {
+  const setMenu = (open) => {
+    menu.hidden = !open;
+    burger.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('menu-open', open);
+    if (open) menu.querySelector('.menu__panel > a').focus();
+    else burger.focus();
+  };
+  burger.addEventListener('click', () => setMenu(menu.hidden));
+  menu.addEventListener('click', (e) => {
+    if (e.target.closest('[data-close], .menu__panel > a')) setMenu(false);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !menu.hidden) setMenu(false);
+  });
+}
